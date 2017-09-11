@@ -3,11 +3,22 @@
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
+    "baseUrl": ".",
     "declaration": false,
+    "module": "commonjs",
     "moduleResolution": "node",
+    "paths": {
+      "api/*": ["./api/server/*"]
+    },
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
+    "skipLibCheck": true,
+    "stripInternal": true,
+    "noImplicitAny": false,
+    "types": [
+      "@types/underscore"
+    ],
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -15,5 +26,14 @@
       "es2017",
       "dom"
     ]
-  }
+  },
+  "include": [
+    "src/**/*.ts",
+    "api/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "api/node_modules",
+    "api"
+  ]
 }
