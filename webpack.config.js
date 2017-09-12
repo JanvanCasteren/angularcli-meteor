@@ -462,28 +462,6 @@ module.exports = {
       "filename": "[name].[contenthash:20].bundle.css"
     }),
     new SuppressExtractedTextChunksWebpackPlugin(),
-    new LicenseWebpackPlugin({
-      "licenseFilenames": [
-        "LICENSE",
-        "LICENSE.md",
-        "LICENSE.txt",
-        "license",
-        "license.md",
-        "license.txt"
-      ],
-      "perChunkOutput": false,
-      "outputTemplate": "/home/niko/WebstormProjects/angularcli-meteor/node_modules/license-webpack-plugin/output.template.ejs",
-      "outputFilename": "3rdpartylicenses.txt",
-      "suppressErrors": true,
-      "includePackagesWithoutLicense": false,
-      "abortOnUnacceptableLicense": false,
-      "addBanner": false,
-      "bannerTemplate": "/*! 3rd party license information is available at <%- filename %> */",
-      "includedChunks": [],
-      "excludedChunks": [],
-      "additionalPackages": [],
-      "pattern": /^(MIT|ISC|BSD.*)$/
-    }),
     new EnvironmentPlugin({
       "NODE_ENV": "production"
     }),
