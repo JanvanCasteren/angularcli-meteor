@@ -37,6 +37,17 @@ Initialize Meteor backend
 `meteor-client bundle -s api --release 1.6-beta.26`  
 `npm run start`
 
+## AOT
+
+Remove scripts from package.json to be able to eject  
+Remove webpack.config.js to be able to eject  
+`ng eject --prod`  
+`cat webpack.config.js.prod.patch | patch -p1`  
+`cat webpack.config.js.LicenseWebpackPlugin.revert.patch | patch -p1`  
+`api$ meteor run`  
+`meteor-client bundle -s api --release 1.6-beta.26`  
+`npm run start`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
